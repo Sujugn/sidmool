@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.menu_wrap #menu {
+  cursor: pointer;
+  align-items: center;
+  margin: 30px;
+  display: flex;
+}
+
+.menu_wrap #menu li {
+  margin-right: 20px;
+}
+
+.menu_wrap #menu li a {
+  color: #000;
+}
+
+.menu_wrap #menu .logo {
+  width: 150px;
+  margin-right: 20px;
+}
+
+.menu_wrap #menu .logo img {
+  width: 100%;
+  display: block;
+}
+
+/*# sourceMappingURL=index.7abba0a1.css.map */

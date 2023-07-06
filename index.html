@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>시드물 메인페이지</title>
+    <link rel="stylesheet" href="./css/main.scss" />
+    <script src="./js/main.js" defer></script>
+
+    <!--  /* jquery fullPage cdn*/ -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css"
+    />
+  </head>
+  <body>
+    <div class="menu_wrap">
+      <ul id="menu">
+        <div class="logo">
+          <!--  <img src="./images/logo.png" alt="" /> -->
+          <h2>SIDMOOL</h2>
+        </div>
+        <li data-menuanchor="firstPage" class="active">
+          <a href="#firstPage">BRAND</a>
+        </li>
+        <li data-menuanchor="secondPage"><a href="#secondPage">SHOP</a></li>
+        <li data-menuanchor="3rdPage"><a href="#3rdPage">PROJECT</a></li>
+        <li data-menuanchor="4rdPage"><a href="#4rdPage">COMMUNITY</a></li>
+        <li data-menuanchor="5rdPage"><a href="#5rdPage">EVENT</a></li>
+      </ul>
+      <!-- //menu -->
+    </div>
+
+    <div id="fullpage">
+      <div class="section" class="section active">section00</div>
+      <div class="section">section01</div>
+      <div class="section">section02</div>
+      <div class="section">section03</div>
+      <div class="section">section04</div>
+    </div>
+    ><!-- //fullpage -->
+
+    <script>
+      new fullpage("#fullpage", {
+        autoScrolling: true,
+        scrollHorizontally: true,
+        anchors: ["firstPage", "secondPage", "3rdPage", "4rdPage", "5rdPage"],
+        menu: "#menu",
+      });
+    </script>
+  </body>
+</html>
