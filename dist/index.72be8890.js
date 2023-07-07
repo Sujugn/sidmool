@@ -5,5 +5,6 @@ document.addEventListener("DOMContentLoaded", ()=>{
     });
 //장바구니 페이지 이동
 });
+window.open("URL", "title", "height=" + screen.height + ",width=" + screen.width + "fullscreen=yes"); //풀스크린
 
 //# sourceMappingURL=index.72be8890.js.map

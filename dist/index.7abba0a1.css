@@ -84,6 +84,14 @@ button {
   font-size: 14px;
 }
 
+#fullpage #page04 .section_01 .tabs li:hover .backgorund_color {
+  background-color: #92c501;
+}
+
+#fullpage #page04 .section_01 .tabs li:hover p {
+  font-weight: bold;
+}
+
 #fullpage #page04 .section_02 {
   margin: 30px 0;
   display: flex;
@@ -124,6 +132,7 @@ button {
 #fullpage #page04 .section_02 .goods_img {
   border: 1px solid #000;
   width: 100%;
+  overflow: hidden;
 }
 
 #fullpage #page04 .section_02 .goods_img .swiper-slide img {
@@ -137,15 +146,37 @@ button {
   width: 100%;
 }
 
+#fullpage #page04 .section_02 .goods_element .goods_name {
+  padding-top: 5px;
+}
+
+#fullpage #page04 .section_02 .goods_element .goods_name p {
+  color: #000;
+  font-size: 17px;
+}
+
 #fullpage #page04 .section_02 .goods_element .goods_price {
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+  font-size: 14px;
   display: flex;
 }
 
+#fullpage #page04 .section_02 .goods_element .goods_price .percent {
+  color: #fff;
+  background-color: #2a3e48;
+  border-radius: 20px;
+  padding: 5px 10px;
+}
+
 #fullpage #page04 .section_02 .goods_element .goods_price .sale {
+  margin: 0 10px;
   text-decoration: line-through;
 }
 
 #fullpage #page04 .section_02 .goods_element .goods_cart {
+  cursor: pointer;
   display: flex;
 }
 

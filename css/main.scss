@@ -1,5 +1,6 @@
 $iconbackgroundcolor: #FAFAFA;
 $border_color: #F1F1F1;
+$pointcolor: #92C501;
 
 * {
   margin: 0;
@@ -55,7 +56,7 @@ button{
     border-bottom:1px solid $border_color;
     li{
       margin-right: 20px;
-      a{
+      a{display: block;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -79,6 +80,15 @@ button{
           font-size: 14px;
         }
       }
+
+      &:hover .backgorund_color{
+        background-color: $pointcolor;
+      }
+
+      &:hover p{
+        font-weight: bold;
+      }
+
     }
   }
   }//section_01
@@ -123,6 +133,7 @@ button{
     .goods_img{
       width: 100%;
       border: 1px solid black;
+      overflow: hidden;
       .swiper-slide img {
         display: block;
         width: 100%;
@@ -133,18 +144,32 @@ button{
     .goods_element{
       width: 100%;
         .goods_name{
-          p{}
+          padding-top: 5px;
+          p{
+            color: #000;
+            font-size: 17px;
+          }
         }
 
         .goods_price{
+          font-size: 14px;
           display: flex;
-          .percent{}
-          .sale{text-decoration: line-through;}
+          justify-content: center;
+          align-items: center;
+          margin: 10px 0;
+          .percent{
+            background-color: #2a3e48;
+            color: white;
+            border-radius: 20px;
+            padding: 5px 10px;
+          }
+          .sale{text-decoration: line-through; margin: 0 10px;}
           .origin{}
         }
         
         .goods_cart{
           display: flex;
+          cursor: pointer;
           #buy_btn{width: 100%; height: 40px; background-color: black;color: white;} 
           #cart_btn{background-color: black; color: white;}
         }
