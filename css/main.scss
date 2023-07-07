@@ -12,6 +12,10 @@ a {
   text-decoration: none;
   color: black;
 }
+button{
+  border: none;
+  background-color: transparent;
+}
 
 
 .menu_wrap {
@@ -100,6 +104,51 @@ a {
         height: 300px;
         background-color: #ccc;
         margin-right: 10px;
+
+        .product_img{
+          width: 100%;
+          img{
+            display: block;
+            width: 100%;
+          }
+        }
+
+        .product_element{
+          .product_name{
+            p{
+
+            }
+          }
+
+          .product_price{
+            .percent{
+
+            }
+            .origin{
+
+            }
+            .sale{
+
+            }
+          }
+
+          .product_buy{
+            #buy_btn{
+              width: 100%;
+              background-color: white;
+              color: white;
+              height: 48px;
+              font-size: 16px;
+              color: #2a3e48;
+              
+
+            }
+
+            #cart_btn{
+
+            }
+          }
+        }
 
       }
     }
