@@ -8,6 +8,7 @@ li {
 }
 
 a {
+  color: #000;
   text-decoration: none;
 }
 
@@ -34,6 +35,68 @@ a {
 .menu_wrap #menu .logo img {
   width: 100%;
   display: block;
+}
+
+#fullpage #page04 .tabs {
+  justify-content: center;
+  display: flex;
+}
+
+#fullpage #page04 .tabs li {
+  margin-right: 20px;
+}
+
+#fullpage #page04 .tabs li a {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+}
+
+#fullpage #page04 .tabs li a .backgorund_color {
+  background-color: #fafafa;
+  border: 1px solid #f1f1f1;
+  border-radius: 50%;
+  width: 20px;
+  margin-bottom: 10px;
+  padding: 20px;
+}
+
+#fullpage #page04 .tabs li a .backgorund_color img {
+  width: 100%;
+  display: block;
+}
+
+#fullpage #page04 .tabs li a p {
+  font-weight: 14px;
+  color: #333;
+  font-size: 14px;
+}
+
+#fullpage #page04 .swiper_tab {
+  cursor: pointer;
+  border: 1px solid #000;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  display: flex;
+}
+
+#fullpage #page04 .swiper_tab li {
+  border: 1px solid #000;
+}
+
+#fullpage #page04 .swiper-container {
+  width: 334px;
+}
+
+#fullpage #page04 .swiper-container .swiper-wrapper .swiper-slide {
+  background-color: #ccc;
+  height: 300px;
+  margin-right: 10px;
+}
+
+#fullpage #page04 .swiper-container .swiper_best {
+  display: none;
 }
 
 /*# sourceMappingURL=index.7abba0a1.css.map */

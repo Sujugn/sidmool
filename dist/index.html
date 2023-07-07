@@ -11,6 +11,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css">
+
+        <!--  /* Swiper 외부 라이브러리*/ -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   </head>
   <body>
     <div class="menu_wrap">
@@ -34,7 +38,64 @@
       <div class="section">section00</div>
       <div class="section">section01</div>
       <div class="section">section02</div>
-      <div class="section">section03</div>
+
+
+
+      <div class="section" id="page04">
+        <ul class="tabs">
+          <li><a href="#tab0"><div class="backgorund_color"><img src="/menu.b8c8ff73.png" alt="전체tab"></div><p>전체메뉴</p></a></li>
+          <li><a href="#tab1"><div class="backgorund_color"><img src="/cleansing_cream.cbde9f2f.png" alt="클렌징tab"></div><p>클렌징</p></a></li>
+          <li><a href="#tab2"><div class="backgorund_color"><img src="/menu.b8c8ff73.png" alt="페이스/바디오일tab"></div><p>페이스/바디오일</p></a></li>
+          <li><a href="#tab3"><div class="backgorund_color"><img src="/menu.b8c8ff73.png" alt="전체tab"></div><p>토너/미스트</p></a></li>
+          <li><a href="#tab4"><div class="backgorund_color"><img src="/serum.415091ff.png" alt="에센스/앰플tab"></div><p>에센스/앰플</p></a></li>
+          <li><a href="#tab5"><div class="backgorund_color"><img src="/menu.b8c8ff73.png" alt="전체tab"></div><p>에멀전</p></a></li>
+          <li><a href="#tab6"><div class="backgorund_color"><img src="/menu.b8c8ff73.png" alt="전체tab"></div><p>크림/밤</p></a></li>
+          <li><a href="#tab7"><div class="backgorund_color"><img src="/menu.b8c8ff73.png" alt="전체tab"></div><p>선케어</p></a></li>
+          <li><a href="#tab8"><div class="backgorund_color"><img src="/mask.2cc25820.png" alt="마스크팩tab"></div><p>마스크/팩</p></a></li>
+          <li><a href="#tab9"><div class="backgorund_color"><img src="/menu.b8c8ff73.png" alt="전체tab"></div><p>바디케어</p></a></li>
+          <li><a href="#tab10"><div class="backgorund_color"><img src="/menu.b8c8ff73.png" alt="전체tab"></div><p>화장소품</p></a></li>
+        </ul>
+
+       <div class="swiper-box">
+        <ul class="swiper_tab">
+          <li class="swp_tab swp_tab_0 active" onclick="fnMoveTab(0)">메뉴1</li>
+          <li class="swp_tab swp_tab_1" onclick="fnMoveTab(1)">메뉴2</li>
+          <li class="swp_tab swp_tab_2" onclick="fnMoveTab(2)">메뉴3</li>
+        </ul>
+      
+        <div class="real_swiper swiper-container">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+              product_01
+            </li>
+            <li class="swiper-slide">
+              product_02
+            </li>
+            <li class="swiper-slide">
+              product_03
+          </li></ul><!-- //swiper-wrapper -->
+
+          <ul class="swiper-wrapper swiper_best">
+            <li class="swiper-slide">
+              메뉴 2 product_01
+            </li>
+            <li class="swiper-slide">
+              메뉴 2product_02
+            </li>
+            <li class="swiper-slide">
+              메뉴 2product_03
+          </li></ul><!-- //swiper-wrapper -->
+      
+          <div class="swiper-pagination"></div>
+      
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </div>
+      </div> 
+      <!-- //page04 -->
+
+
       <div class="section">section04</div>
     </div>
     ><!-- //fullpage -->
@@ -53,5 +114,34 @@
 });
 
 </script>
-  <script src="/sidmool.3464ddca.js"></script></body>
+
+    <script>var swiper = new Swiper(".real_swiper", {
+    speed: 500,
+    autoplay: {
+        delay: 7000,
+        disableOnInteraction: false
+    },
+    pagination: {
+        el: ".swiper-pagination",
+        type: "bullets",
+        clickable: true
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev"
+    },
+    on: {
+        slideChange: function() {
+            const activeIndex = swiper.activeIndex;
+            $(".swp_tab").removeClass("active");
+            $(".swp_tab_" + activeIndex).addClass("active");
+        }
+    }
+});
+function fnMoveTab(index) {
+    swiper.slideTo(index);
+}
+
+</script>
+  <script src="/sidmool-2.3464ddca.js"></script></body>
 </html>
