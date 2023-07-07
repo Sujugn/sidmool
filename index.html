@@ -16,12 +16,10 @@
     />
 
         <!--  /* Swiper 외부 라이브러리*/ -->
-    <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-/>
-<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-  </head>
+        <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+      />
   <body>
     <div class="menu_wrap">
       <ul id="menu">
@@ -41,13 +39,14 @@
     </div>
 
     <div id="fullpage">
-      <div class="section" class="section active">section00</div>
+      <div class="section" class="section active">비주얼 메인</div>
       <div class="section">section01</div>
       <div class="section">section02</div>
 
 
 
       <div class="section" id="page04">
+        <section class="section_01">
         <ul class="tabs">
           <li><a href="#tab0"><div class="backgorund_color"><img src="./images/menu.png" alt="전체tab"></div><p>전체메뉴</p></a></li>
           <li><a href="#tab1"><div class="backgorund_color"><img src="./images/cleansing_cream.png" alt="클렌징tab"></div><p>클렌징</p></a></li>
@@ -61,60 +60,50 @@
           <li><a href="#tab9"><div class="backgorund_color"><img src="./images/menu.png" alt="전체tab"></div><p>바디케어</p></a></li>
           <li><a href="#tab10"><div class="backgorund_color"><img src="./images/menu.png" alt="전체tab"></div><p>화장소품</p></a></li>
         </ul>
-
-       <div class="swiper-box">
-        <ul class="swiper_tab">
-          <li class="swp_tab swp_tab_0 active" onclick="fnMoveTab(0)">메뉴1</li>
-          <li class="swp_tab swp_tab_1" onclick="fnMoveTab(1)">메뉴2</li>
-          <li class="swp_tab swp_tab_2" onclick="fnMoveTab(2)">메뉴3</li>
-        </ul>
-      
-        <div class="real_swiper swiper-container">
-          <ul class="swiper-wrapper">
-            <li class="swiper-slide">
-            <div class="product_img">
-              <!-- <img src="" alt=""> -->상품이미지
-            </div>
-            <div class="product_element">
-              <div class="product_name">
-                <p>상품이름</p>
-              </div>
-              <div class="product_price">
-                <span class="percent">퍼센트</span>
-                <p class="origin">원래가격</p>
-                <p class="sale">세일가격</p>
-              </div>
-            <div class="product_buy">
-              <button type="button" id="buy_btn">바로 구매</button>
-              <button type="button" id="cart_Btn">카트</button>
-            </div>
-            </div>
-          
-            </li>
-            <li class="swiper-slide">
-              product_02
-            </li>
-            <li class="swiper-slide">
-              product_03
-          </ul><!-- //swiper-wrapper -->
-
-          <ul class="swiper-wrapper swiper_best">
-            <li class="swiper-slide">
-              메뉴 2 product_01
-            </li>
-            <li class="swiper-slide">
-              메뉴 2product_02
-            </li>
-            <li class="swiper-slide">
-              메뉴 2product_03
-          </ul><!-- //swiper-wrapper -->
-      
-          <div class="swiper-pagination"></div>
-      
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
+      </section>
+      <section class="section_02">
+        <div class="tab_area">
+          <h1 class="tab_best">BEST</h1>
+          <h1 class="tab_new">NEW</h1>
         </div>
-      </div>
+
+         <!-- Swiper -->
+         <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="goods_img">
+                <img src="./images/logo.png" alt="">
+              </div>  
+              <div class="goods_element">
+                <div class="goods_name">
+                  <p>상품이름</p>
+                </div>
+                <div class="goods_price">
+                  <span class="percent">퍼센트</span>
+                  <p class="sale">세일가</p>
+                  <p class="origin">오리진</p>
+                </div>
+                <div class="goods_cart">
+                  <button type="button" id="buy_btn">구매 하기</button>
+                  <button type="button" id="cart_btn">장바구니</button>
+                </div>
+              </div> 
+            </div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+            <div class="swiper-slide">Slide 6</div>
+            <div class="swiper-slide">Slide 7</div>
+            <div class="swiper-slide">Slide 8</div>
+            <div class="swiper-slide">Slide 9</div>
+          </div>
+          <div class="swiper-scrollbar"></div>
+        </div>
+      
+      </section>
+
+
       </div> 
       <!-- //page04 -->
 
@@ -132,34 +121,20 @@
       });
     </script>
 
-    <script>
-       var swiper = new Swiper('.real_swiper', {
-    speed: 500,
-    autoplay: {
-      delay: 7000,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-    on: {
-      slideChange: function () {
-        const activeIndex = swiper.activeIndex;
-        $(".swp_tab").removeClass("active");
-        $(".swp_tab_" + activeIndex).addClass("active");
-      }
-    }
-  });
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-  function fnMoveTab(index) {
-    swiper.slideTo(index);
-  }
-    </script>
+
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    scrollbar: {
+      el: ".swiper-scrollbar",
+      hide: true,
+    },
+  });
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.0.3/swiper-bundle.min.js" integrity="sha512-QffynxUqAt8YnO9jTkUP2yb1ijdpwTVmoPhH5x6l8A+Fkzff56Sc3sTstA7hSxQUOhgtm6MMz4uD92w9tDS+TA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </body>
 </html>
