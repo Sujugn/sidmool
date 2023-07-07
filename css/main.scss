@@ -128,10 +128,12 @@ button{
       display: flex;
       justify-content: center;
       align-items: center;
-      width: calc(100% /3);
+      width: calc(100% /3 - 55px);
+      padding: 10px 5px;
     }
     .goods_img{
       width: 100%;
+      height: 300px;
       border: 1px solid black;
       overflow: hidden;
       .swiper-slide img {

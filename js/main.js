@@ -8,6 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  window.open('URL','title','height=' + screen.height + ',width=' + screen.width + 'fullscreen=yes');
+//   window.open('URL','title','height=' + screen.height + ',width=' + screen.width + 'fullscreen=yes');
   //풀스크린
 
