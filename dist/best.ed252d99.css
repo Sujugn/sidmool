@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.header {
+  cursor: pointer;
+  color: #000;
+  background-color: #fff;
+  height: 50px;
+}
+
+.header ul {
+  align-items: center;
+  margin: 30px;
+  display: flex;
+}
+
+.header ul .logo {
+  width: 150px;
+  margin-right: 20px;
+}
+
+.header ul .logo h2 {
+  font-size: 20px;
+}
+
+.header ul li {
+  margin-right: 20px;
+}
+
+/*# sourceMappingURL=best.ed252d99.css.map */
