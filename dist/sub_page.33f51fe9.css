@@ -19,6 +19,7 @@ button {
 .container {
   padding-left: 40px;
   padding-right: 40px;
+  display: flex;
 }
 
 .container .product_filter_wrapper {
@@ -51,6 +52,25 @@ button {
 .container .product_filter_wrapper .category .group .group_inner .more_btn {
   cursor: pointer;
   font-size: 20px;
+}
+
+.container .product_list_wrapper {
+  flex-grow: 1;
+  margin: 0 20px;
+}
+
+.container .product_list_wrapper .function ul {
+  justify-content: flex-end;
+  display: flex;
+}
+
+.container .product_list_wrapper .function ul li {
+  margin: 0 5px;
+  font-size: 12px;
+}
+
+.container .product_list_wrapper .function ul li a {
+  color: #ccc;
 }
 
 /*# sourceMappingURL=sub_page.33f51fe9.css.map */

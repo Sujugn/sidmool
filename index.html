@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>시드물 메인페이지</title>
-    <link rel="stylesheet" href="./css/main.scss" />
-    <script src="./js/main.js"></script>
+    <link rel="stylesheet" href="./src/css/main.scss" />
+    <script src="./src/js/main.js" type="module"></script>
 
     <!--  /* jquery fullPage cdn*/ -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -42,9 +42,13 @@
     </div>
 
     <div id="fullpage">
-      <div class="section" class="section active">
+      <div class="section" class="section active" id="page01">
+        <div>
+        <a href="./new.html">NEW 페이지 이동</a>
       </div>
-      <div class="section">section01</div>
+      </div>
+      <div class="section">
+        section01</div>
       <div class="section">section02</div>
 
 
@@ -52,17 +56,17 @@
       <div class="section" id="page04">
         <section class="section_01">
         <ul class="tabs">
-          <li><a href="sub_page.html"  target="_blank"><div class="backgorund_color"><img src="./images/menu.png" alt="전체tab"></div><p>전체메뉴</p></a></li>
-          <li><a href="#tab1"><div class="backgorund_color"><img src="./images/cleansing_cream.png" alt="클렌징tab"></div><p>클렌징</p></a></li>
-          <li><a href="#tab2"><div class="backgorund_color"><img src="./images/menu.png" alt="페이스/바디오일tab"></div><p>페이스/바디오일</p></a></li>
-          <li><a href="#tab3"><div class="backgorund_color"><img src="./images/menu.png" alt="전체tab"></div><p>토너/미스트</p></a></li>
-          <li><a href="#tab4"><div class="backgorund_color"><img src="./images/serum.png" alt="에센스/앰플tab"></div><p>에센스/앰플</p></a></li>
-          <li><a href="#tab5"><div class="backgorund_color"><img src="./images/menu.png" alt="전체tab"></div><p>에멀전</p></a></li>
-          <li><a href="#tab6"><div class="backgorund_color"><img src="./images/menu.png" alt="전체tab"></div><p>크림/밤</p></a></li>
-          <li><a href="#tab7"><div class="backgorund_color"><img src="./images/menu.png" alt="전체tab"></div><p>선케어</p></a></li>
-          <li><a href="#tab8"><div class="backgorund_color"><img src="./images/mask.png" alt="마스크팩tab"></div><p>마스크/팩</p></a></li>
-          <li><a href="#tab9"><div class="backgorund_color"><img src="./images/menu.png" alt="전체tab"></div><p>바디케어</p></a></li>
-          <li><a href="#tab10"><div class="backgorund_color"><img src="./images/menu.png" alt="전체tab"></div><p>화장소품</p></a></li>
+          <li><a href="sub_page.html"  target="_blank"><div class="backgorund_color"><img src="./src/images/menu.png" alt="전체tab"></div><p>전체메뉴</p></a></li>
+          <li><a href="#tab1"><div class="backgorund_color"><img src="./src/images/cleansing_cream.png" alt="클렌징tab"></div><p>클렌징</p></a></li>
+          <li><a href="#tab2"><div class="backgorund_color"><img src="./src/images/menu.png" alt="페이스/바디오일tab"></div><p>페이스/바디오일</p></a></li>
+          <li><a href="#tab3"><div class="backgorund_color"><img src="./src/images/menu.png" alt="전체tab"></div><p>토너/미스트</p></a></li>
+          <li><a href="#tab4"><div class="backgorund_color"><img src="./src/images/serum.png" alt="에센스/앰플tab"></div><p>에센스/앰플</p></a></li>
+          <li><a href="#tab5"><div class="backgorund_color"><img src="./src/images/menu.png" alt="전체tab"></div><p>에멀전</p></a></li>
+          <li><a href="#tab6"><div class="backgorund_color"><img src="./src/images/menu.png" alt="전체tab"></div><p>크림/밤</p></a></li>
+          <li><a href="#tab7"><div class="backgorund_color"><img src="./src/images/menu.png" alt="전체tab"></div><p>선케어</p></a></li>
+          <li><a href="#tab8"><div class="backgorund_color"><img src="./src/images/mask.png" alt="마스크팩tab"></div><p>마스크/팩</p></a></li>
+          <li><a href="#tab9"><div class="backgorund_color"><img src="./src/images/menu.png" alt="전체tab"></div><p>바디케어</p></a></li>
+          <li><a href="#tab10"><div class="backgorund_color"><img src="./src/" alt="전체tab"></div><p>화장소품</p></a></li>
         </ul>
       </section>
       <section class="section_02">
@@ -76,7 +80,7 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="goods_img">
-                <img src="./images/best_01.jpg" alt="베스트상품01">
+                <img src="./src/images/best_01.jpg" alt="베스트상품01">
               </div>  
               <div class="goods_element">
                 <div class="goods_name">
@@ -90,14 +94,14 @@
                 <div class="goods_cart">
                   <button type="button" id="buy_btn">구매 하기</button>
                   <button type="button" id="cart_btn">
-                    <img src="./images/cart.png" alt="장바구니아이콘">
+                    <img src="./src/images/cart.png" alt="장바구니아이콘">
                   </button>
                 </div>
               </div> 
             </div>
             <div class="swiper-slide">
               <div class="goods_img">
-                <img src="./images/best_01.jpg" alt="베스트상품01">
+                <img src="./src/images/best_01.jpg" alt="베스트상품01">
               </div>  
               <div class="goods_element">
                 <div class="goods_name">

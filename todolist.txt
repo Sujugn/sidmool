@@ -1,0 +1,20 @@
+<new page>
+1. pagination / 데이터 넣기
+2. product count (총 n개의 상품) 
+3. filter 구현 (신상품,상품명,낮은가격,높은가격)
+4. Gshop animation 효과
+
+*참고사이트 : 크로우캐년
+
+<div class="product">
+                <div class="product_img">
+                    <!-- <img src="." alt=""> -->
+                    제품이미지
+                </div>
+                <div class="product_name">
+                 <p>제품이름</p>
+                </div>
+                <div class="product_price">
+                <p>가격</p>
+                </div>
+            </div>
