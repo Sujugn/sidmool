@@ -1,0 +1,46 @@
+// 상세 보기 버튼 클릭 시 상세 페이지로 이동
+const detailButtons = document.querySelectorAll('.view-detail');
+detailButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const productId = button.getAttribute('data-product-id');
+    navigateToDetailPage(productId);
+  });
+});
+
+// 상세 페이지로 이동하는 함수
+function navigateToDetailPage(productId) {
+  // 여기서 상세 페이지로 이동하는 로직을 구현하세요.
+  // 예를 들어, 페이지 전환, URL 변경 등을 사용하여 상세 페이지로 이동할 수 있습니다.
+  // 상세 페이지로 이동하는 방법은 프레임워크 또는 라이브러리에 따라 다를 수 있습니다.
+  // 예시로 window.location.href를 사용하여 URL을 변경하는 방법을 보여드리겠습니다.
+  window.location.href = `상세페이지URL?id=${productId}`;
+}
+
+
+//////////////////////////////////////////////장바구니 hover 로직
+// 이미지 hover 시에 이미지 변경 및 장바구니 추가 기능
+const productImages = document.querySelectorAll('.product_img img');
+productImages.forEach((img) => {
+  img.addEventListener('mouseover', () => {
+    const hoverSrc = img.dataset.hoverSrc;
+    if (hoverSrc) {
+      img.src = hoverSrc;
+    }
+  });
+
+  img.addEventListener('mouseout', () => {
+    const originalSrc = img.getAttribute('src');
+    const hoverSrc = img.dataset.hoverSrc;
+    if (hoverSrc) {
+      img.src = originalSrc;
+    }
+  });
+
+  const cartIcon = img.parentElement.querySelector('.cart_icon');
+  if (cartIcon) {
+    cartIcon.addEventListener('click', () => {
+      // 장바구니 추가 기능 구현
+      // 원하는 동작을 수행하도록 코드를 작성해주세요.
+    });
+  }
+});

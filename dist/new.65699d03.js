@@ -575,10 +575,11 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 
 },{}],"lHpmK":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-var _productJs = require("../data/product.js");
-var _productJsDefault = parcelHelpers.interopDefault(_productJs);
+var _newDataJs = require("../data/new_data.js");
+var _newDataJsDefault = parcelHelpers.interopDefault(_newDataJs);
+//상품 동적 레이아웃
 const productInner = document.querySelector(".product_inner");
-(0, _productJsDefault.default).forEach((value)=>{
+(0, _newDataJsDefault.default).forEach((value)=>{
     let element = document.createElement("div");
     element.setAttribute("class", "goods");
     element.innerHTML = `
@@ -586,19 +587,49 @@ const productInner = document.querySelector(".product_inner");
           <div class="product">
                 <div class="product_img">
                    <img src="${value.image}">
+                   
                 </div>
                 <div class="product_name">
                  <p>${value.name}</p>
                 </div>
                 <div class="product_price">
+                <p class="origin">${value.origin}</p>
                 <p>${value.price}</p>
                 </div>
             </div>
         `;
     productInner.appendChild(element);
 });
+//상품 총 수량 표시
+const productCount = document.querySelector(".product_count strong");
+function updateProductCount() {
+    productCount.textContent = (0, _newDataJsDefault.default).length;
+}
+updateProductCount();
+//pagination
+//총페이지수
+let totalData = (0, _newDataJsDefault.default).length;
+const limit = 12;
+const totalPage = totalData / limit;
+//현재페이지그룹
+const pageCount = 5;
+const currentPage = 1;
+const pageGroup = Math.ceil(currentPage / pageCount);
+//이전,다음 
+let lastNumber = pageGroup * pageCount;
+if (lastNumber > totalPage) lastNumber = totalPage;
+let firstNumber = lastNumber - (pageCount - 1);
+const next = lastNumber + 1;
+const prev = firstNumber - 1;
+for(let i = firstNumber; i <= lastNumber; i++){
+    let pageBtn = createElement("div");
+    pageBtn.setAttribute("class", "btnBox");
+    pageBtn.innerHTML = `<button class="pageNumber" id="page_${i}">${i}</button>`;
+    productInner.appendChild(pageBtn);
+    console.log(pageBtn);
+}
 
-},{"../data/product.js":"9npEm","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9npEm":[function(require,module,exports) {
+},{"../data/new_data.js":"GPYpi","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"GPYpi":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 const newProduct = [
@@ -606,6 +637,7 @@ const newProduct = [
         id: "new_01",
         name: "피토 피디알엔 리페어 크림 60ml",
         image: "./images/new_01.jpg",
+        origin: "",
         price: "18600",
         description: "물유래 PDRN = Phyto DNA\xae 특허 원료 50%"
     },
@@ -613,6 +645,7 @@ const newProduct = [
         id: "new_02",
         name: "민중기 엑소좀 흔적 스킨 부스터 30ml",
         image: "./images/new_02.jpg",
+        origin: "36000",
         price: "22800",
         description: "식물유래 피토 엑소좀으로 효과적인 흔적 스킨 케어"
     },
@@ -620,6 +653,7 @@ const newProduct = [
         id: "new_03",
         name: "그린 토마토 모공 리프팅 에센셜 40ml",
         image: "./images/new_03.jpg",
+        origin: "",
         price: "9800",
         description: "커지고 늘어지는 모공을 위한 토마토추출물 85%"
     },
@@ -627,6 +661,7 @@ const newProduct = [
         id: "new_04",
         name: "저분자 콜라겐 300 리프팅 크림 80g",
         image: "./images/new_04.jpg",
+        origin: "82000",
         price: "21000",
         description: "프리미엄 저분자 나노 콜라겐! 젤리같은 탱탱볼 피부 탄력 케어"
     },
@@ -634,6 +669,7 @@ const newProduct = [
         id: "new_05",
         name: "시드물 프리미엄 불소 엠치약 50g",
         image: "./images/new_05.jpg",
+        origin: "",
         price: "1580",
         description: "우리 가족 안심 건강 불소 치약"
     },
@@ -641,6 +677,7 @@ const newProduct = [
         id: "new_06",
         name: "글루타치온 마일드 잡티 토너 210ml",
         image: "./images/new_06.jpg",
+        origin: "32000",
         price: "16800",
         description: "여름 햇살 기미 잡티 데일리 마일드 케어!"
     },
@@ -648,6 +685,7 @@ const newProduct = [
         id: "new_07",
         name: "닥터트럽 리터닝 클렌징 밀크바 100g",
         image: "./images/new_07.jpg",
+        origin: "",
         price: "9800",
         description: "클렌징 밀크의 편안함과 순수함을 담은 비누!"
     },
@@ -655,6 +693,7 @@ const newProduct = [
         id: "new_08",
         name: "닥터트럽 모이스춰 밀크 100ml",
         image: "./images/new_08.jpg",
+        origin: "",
         price: "12800",
         description: "순수함, 편안함을 담은 우유 같은 정말 순한 보습제"
     }

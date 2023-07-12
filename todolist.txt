@@ -3,42 +3,16 @@
 2. product count (총 n개의 상품) 
 3. filter 구현 (신상품,상품명,낮은가격,높은가격)
 4. Gshop animation 효과
-
 *참고사이트 : 크로우캐년
 
-<div class="product">
-                <div class="product_img">
-                    <!-- <img src="." alt=""> -->
-                    제품이미지
-                </div>
-                <div class="product_name">
-                 <p>제품이름</p>
-                </div>
-                <div class="product_price">
-                <p>가격</p>
-                </div>
-            </div>
+
+<레이아웃 참고사이트>
+-이솝
+-러쉬
+-바이오더마
+-메디힐 
 
 
 
-             //총페이지수
-                let totalData = newProduct.length;
-                const limit = 12;
-                const totalPage = totalData/limit;
 
-          //현재페이지그룹
-                const pageCount = 5;
-                const currentPage = 1;
-                const pageGroup = Math.ceil(currentPage/pageCount);
 
-        //이전,다음 
-        let lastNumber = pageGroup * pageCount
-
-    if(lastNumber>totalPage){
-        lastNumber=totalPage
-    }
-    
-    let firstNumber = lastNumber - (pageCount - 1);
-
-    const next = lastNumber + 1
-    const prev = firstNumber - 1

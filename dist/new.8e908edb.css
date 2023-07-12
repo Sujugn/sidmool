@@ -80,10 +80,17 @@ body {
 }
 
 .container .product_list_wrapper .product_inner .goods .product .product_price {
-  text-align: center;
   color: #333;
+  justify-content: center;
   font-size: 15px;
   font-weight: 600;
+  display: flex;
+}
+
+.container .product_list_wrapper .product_inner .goods .product .product_price p:first-child {
+  padding-right: 10px;
+  font-weight: 400;
+  text-decoration: line-through;
 }
 
 /*# sourceMappingURL=new.8e908edb.css.map */
