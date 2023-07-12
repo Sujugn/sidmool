@@ -1,0 +1,27 @@
+*{margin: 0; padding: 0;}
+li{list-style: none;}
+a{text-decoration: none; color: black;}
+
+.header{
+    cursor: pointer;
+    height: 50px;
+    background-color: white;
+    color: black;
+    ul{
+        margin: 30px;
+        display: flex;
+        align-items: center;
+        .logo{
+            width: 150px;
+            margin-right: 20px;
+            h2{
+                font-size: 20px;
+            }
+        }
+        li{
+            margin-right: 20px;
+            a{
+            }
+        }
+    }
+}

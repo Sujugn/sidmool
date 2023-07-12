@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*{margin: 0; padding: 0;}
+li{list-style: none;}
+a{text-decoration: none;}
+body{
+    font-family: 'Nanum Myeongjo', serif;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    .product_list_wrapper{
+        padding: 0 80px;
+        .new_title{
+            margin: 30px 0;
+            h2{text-align: center;}
+        }
+        .function{
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+            ul{ 
+                display: flex;
+
+                li{
+                    margin: 0 5px;
+                    a{
+
+                    }
+                }
+            }
+        }//function
+
+        .product_inner{
+            display: flex;
+            flex-wrap: wrap;
+            .product{
+                width: calc(100% / 4 - 40px);
+                justify-content: center;
+                margin: 10px 20px 80px 20px;
+                .product_img{
+                    background-color: #ccc;
+                    height: 300px;
+                    text-align: center;
+                    line-height: 300px;
+                    img{
+                        display: block;
+                        width: 100%;
+                    }
+                }
+
+                .product_name{
+                    margin: 20px 0;
+                    text-align: center;
+                    color: #333;
+                    border-bottom: 1px solid #ccc;
+                    padding-bottom: 20px;
+                    p{
+
+                    }    
+                }
+
+                .product_price{
+                    text-align: center;
+                    color: #333;
+                    font-size: 15px;
+                    font-weight: 600;
+                }
+                
+            }
+        }
+    }
+}
