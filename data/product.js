@@ -45,7 +45,7 @@ const newProduct = [
     },
 
     {id:"new_07",
-    name:"닥터트럽 스킨 리터닝 클렌징 밀크바 100g",
+    name:"닥터트럽 리터닝 클렌징 밀크바 100g",
     image:"./images/new_07.jpg",
     price:"9800",
     description:"클렌징 밀크의 편안함과 순수함을 담은 비누!"

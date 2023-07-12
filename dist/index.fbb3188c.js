@@ -611,6 +611,10 @@ document.addEventListener("DOMContentLoaded", ()=>{
         selectedContainer.style.display = "block";
     }
 });
+window.addEventListener("DOMContentLoaded", function() {
+    const goods = document.querySelectorAll(".goods");
+    goods.forEach((value)=>{});
+}); //WINDOW
 
 },{}]},["ludAm","bDbGG"], "bDbGG", "parcelRequirea50a")
 

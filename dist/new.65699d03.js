@@ -577,24 +577,25 @@ function hmrAccept(bundle /*: ParcelRequire */ , id /*: string */ ) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _productJs = require("../data/product.js");
 var _productJsDefault = parcelHelpers.interopDefault(_productJs);
-//pagination
-document.addEventListener(function() {
-    (0, _productJsDefault.default).addEventListener(function() {});
-    const productInner = document.querySelector(".product_inner");
-    //총페이지수
-    let totalData = (0, _productJsDefault.default).length;
-    const limit = 12;
-    const totalPage = totalData / limit;
-    //현재페이지그룹
-    const pageCount = 5;
-    const currentPage = 1;
-    const pageGroup = Math.ceil(currentPage / pageCount);
-    //이전,다음 
-    let lastNumber = pageGroup * pageCount;
-    if (lastNumber > totalPage) lastNumber = totalPage;
-    let firstNumber = lastNumber - (pageCount - 1);
-    const next = lastNumber + 1;
-    const prev = firstNumber - 1;
+const productInner = document.querySelector(".product_inner");
+(0, _productJsDefault.default).forEach((value)=>{
+    let element = document.createElement("div");
+    element.setAttribute("class", "goods");
+    element.innerHTML = `
+        
+          <div class="product">
+                <div class="product_img">
+                   <img src="${value.image}">
+                </div>
+                <div class="product_name">
+                 <p>${value.name}</p>
+                </div>
+                <div class="product_price">
+                <p>${value.price}</p>
+                </div>
+            </div>
+        `;
+    productInner.appendChild(element);
 });
 
 },{"../data/product.js":"9npEm","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"9npEm":[function(require,module,exports) {
@@ -645,7 +646,7 @@ const newProduct = [
     },
     {
         id: "new_07",
-        name: "닥터트럽 스킨 리터닝 클렌징 밀크바 100g",
+        name: "닥터트럽 리터닝 클렌징 밀크바 100g",
         image: "./images/new_07.jpg",
         price: "9800",
         description: "클렌징 밀크의 편안함과 순수함을 담은 비누!"

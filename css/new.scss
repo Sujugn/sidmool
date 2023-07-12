@@ -20,6 +20,7 @@ body{
             display: flex;
             justify-content: space-between;
             margin: 20px;
+            padding: 0 30px;
             ul{ 
                 display: flex;
 
@@ -33,39 +34,44 @@ body{
         }//function
 
         .product_inner{
+            width: 100%;
             display: flex;
             flex-wrap: wrap;
-            .product{
-                width: calc(100% / 4 - 40px);
-                justify-content: center;
-                margin: 10px 20px 80px 20px;
-                .product_img{
-                    background-color: #ccc;
-                    height: 300px;
-                    text-align: center;
-                    line-height: 300px;
-                    img{
-                        display: block;
-                        width: 100%;
+            justify-content: center;
+            .goods{
+                width: calc(100% / 4 - 60px);
+                margin: 0 20px;
+                .product{
+                    margin-bottom: 80px;
+                    .product_img{
+                        background-color: #ccc;
+                        height: 300px;
+                        text-align: center;
+                        line-height: 300px;
+                        img{
+                            display: block;
+                            width: 100%;
+                        }
                     }
-                }
-
-                .product_name{
-                    margin: 20px 0;
-                    text-align: center;
-                    color: #333;
-                    border-bottom: 1px solid #ccc;
-                    padding-bottom: 20px;
-                    p{
-
-                    }    
-                }
-
-                .product_price{
-                    text-align: center;
-                    color: #333;
-                    font-size: 15px;
-                    font-weight: 600;
+    
+                    .product_name{
+                        margin: 20px 0;
+                        text-align: center;
+                        color: #333;
+                        border-bottom: 1px solid #ccc;
+                        padding-bottom: 20px;
+                        p{
+    
+                        }    
+                    }
+    
+                    .product_price{
+                        text-align: center;
+                        color: #333;
+                        font-size: 15px;
+                        font-weight: 600;
+                    }
+                    
                 }
                 
             }

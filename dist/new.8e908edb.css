@@ -31,6 +31,7 @@ body {
 .container .product_list_wrapper .function {
   justify-content: space-between;
   margin: 20px;
+  padding: 0 30px;
   display: flex;
 }
 
@@ -44,28 +45,33 @@ body {
 
 .container .product_list_wrapper .product_inner {
   flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
   display: flex;
 }
 
-.container .product_list_wrapper .product_inner .product {
-  justify-content: center;
-  width: calc(25% - 40px);
-  margin: 10px 20px 80px;
+.container .product_list_wrapper .product_inner .goods {
+  width: calc(25% - 60px);
+  margin: 0 20px;
 }
 
-.container .product_list_wrapper .product_inner .product .product_img {
+.container .product_list_wrapper .product_inner .goods .product {
+  margin-bottom: 80px;
+}
+
+.container .product_list_wrapper .product_inner .goods .product .product_img {
   text-align: center;
   background-color: #ccc;
   height: 300px;
   line-height: 300px;
 }
 
-.container .product_list_wrapper .product_inner .product .product_img img {
+.container .product_list_wrapper .product_inner .goods .product .product_img img {
   width: 100%;
   display: block;
 }
 
-.container .product_list_wrapper .product_inner .product .product_name {
+.container .product_list_wrapper .product_inner .goods .product .product_name {
   text-align: center;
   color: #333;
   border-bottom: 1px solid #ccc;
@@ -73,7 +79,7 @@ body {
   padding-bottom: 20px;
 }
 
-.container .product_list_wrapper .product_inner .product .product_price {
+.container .product_list_wrapper .product_inner .goods .product .product_price {
   text-align: center;
   color: #333;
   font-size: 15px;
