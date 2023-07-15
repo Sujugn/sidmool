@@ -1,6 +1,8 @@
 import newProduct from '../data/new_data.js';
      
 
+   
+
     //상품 동적 레이아웃
     const productInner = document.querySelector('.product_inner');
     newProduct.forEach((value)=>{
@@ -26,6 +28,7 @@ import newProduct from '../data/new_data.js';
         `
         productInner.appendChild(element)
     })
+
 
 
         //상품 총 수량 표시
